@@ -1,1 +1,66 @@
-<p>home.component works!</p>
+<div class="home-page-container">
+    
+    <!-- Sección 1: Hero Principal (Destacado y Coherente) -->
+    <section class="hero-section text-white text-center py-5 mb-5">
+        <div class="container py-5">
+            <h1 class="display-3 hero-title">Bienvenido a la Galería de Coches Premium</h1>
+            <p class="lead mb-4 hero-subtitle">Explora nuestro exclusivo catálogo y gestiona tu colección de vehículos de forma espectacular.</p>
+            
+            <!-- Botón de Llamada a la Acción (Consistente con los botones del menú/tarjetas) -->
+            <a [routerLink]="['/coches']" class="btn btn-hero-custom">
+                Ver Catálogo Completo <i class="bi bi-arrow-right-short"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Sección 2: Características Destacadas (Tarjetas de servicio) -->
+    <section class="container my-5">
+        <h2 class="text-center mb-5 text-shadow-blue feature-heading">¿Por qué Elegirnos?</h2>
+        
+        <div class="row g-4">
+            
+            <!-- Característica 1: Diseño Moderno -->
+            <div class="col-md-4">
+                <div class="feature-card shadow-lg p-4 text-center">
+                    <i class="bi bi-palette-fill feature-icon"></i>
+                    <h5 class="feature-title">Diseño Impecable</h5>
+                    <p class="feature-text">Una interfaz espectacular, moderna y completamente responsiva, diseñada con los mejores estándares.</p>
+                </div>
+            </div>
+            
+            <!-- Característica 2: Gestión Rápida -->
+            <div class="col-md-4">
+                <div class="feature-card shadow-lg p-4 text-center">
+                    <i class="bi bi-speedometer2 feature-icon"></i>
+                    <h5 class="feature-title">Gestión Eficiente</h5>
+                    <p class="feature-text">Edita y elimina vehículos de tu colección con herramientas rápidas y sencillas.</p>
+                </div>
+            </div>
+            
+            <!-- Característica 3: Experiencia de Usuario -->
+            <div class="col-md-4">
+                <div class="feature-card shadow-lg p-4 text-center">
+                    <i class="bi bi-person-heart feature-icon"></i>
+                    <h5 class="feature-title">Enfocado al Usuario</h5>
+                    <p class="feature-text">Priorizamos tu experiencia con navegación clara y accesibilidad en cada rincón.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 3: Cita o Banner de Llamada (Con el tema azul oscuro) -->
+    <section class="container-fluid my-5 py-5 blue-banner text-center text-white">
+        <blockquote class="blockquote mb-0">
+            <p class="mb-0 banner-quote">"El diseño no es sólo cómo se ve y se siente. El diseño es cómo funciona."</p>
+            <footer class="blockquote-footer text-white mt-2">
+                <cite title="Source Title">Steve Jobs</cite>
+            </footer>
+        </blockquote>
+    </section>
+    
+    <!-- Opcional: Footer (Pie de Página Básico) -->
+    <footer class="text-center py-3 footer-custom">
+        <p class="mb-0 text-muted">&copy; 2024 Galería de Coches. Todos los derechos reservados.</p>
+    </footer>
+
+</div>

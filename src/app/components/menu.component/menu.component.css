@@ -1,0 +1,133 @@
+/* Estilos generales para el navbar - Ahora con degradado azul y brillo */
+.custom-navbar {
+    background: linear-gradient(90deg, #4285F4 0%, #2874A6 100%); /* Degradado de azules vibrantes */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada para efecto 3D */
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid #1a237e; /* Borde inferior sutil para contraste */
+}
+
+/* Estilo para el nombre/logo de la marca - Blanco brillante y con un pequeño brillo de texto */
+.navbar-brand {
+    color: #ffffff !important; /* Texto blanco puro */
+    font-size: 1.8rem; /* Un poco más grande */
+    font-weight: 800; /* Más audaz */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Brillo sutil */
+    transition: all 0.4s ease-in-out;
+}
+
+.navbar-brand:hover {
+    color: #e0f2f7 !important; /* Un azul muy claro al pasar el ratón */
+    transform: scale(1.05); /* Pequeño zoom al pasar el ratón */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 1); /* Brillo más intenso */
+}
+
+/* Estilos para los enlaces del menú - Blancos con hover azul claro y efecto de subida */
+.nav-link {
+    color: #ffffff !important; /* Texto blanco para resaltar */
+    font-weight: 600; /* Seminegrita */
+    margin-right: 18px;
+    padding: 10px 20px;
+    border-radius: 8px; /* Bordes más redondeados */
+    position: relative; /* Para el efecto de "subrayado" animado */
+    transition: all 0.3s ease-in-out;
+    overflow: hidden; /* Asegura que el efecto no se salga */
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #e0f2f7; /* Subrayado azul claro */
+    transform: scaleX(0); /* Empieza oculto */
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #e0f2f7 !important; /* Azul muy claro al pasar el ratón */
+    background-color: rgba(255, 255, 255, 0.15); /* Fondo blanco translúcido */
+    transform: translateY(-3px); /* Efecto de "subida" */
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+    transform: scaleX(1); /* Muestra el subrayado al pasar el ratón o si está activo */
+}
+
+.nav-link.active {
+    color: #e0f2f7 !important; /* Azul muy claro para el activo */
+    background-color: rgba(255, 255, 255, 0.25); /* Fondo más visible para activo */
+    font-weight: 700;
+}
+
+/* Estilos para la barra de búsqueda - Diseño moderno con icono integrado */
+.search-form {
+    margin-left: 25px;
+}
+
+.custom-search-input {
+    border: none;
+    border-radius: 25px 0 0 25px; /* Bordes más redondeados */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo blanco translúcido */
+    color: #ffffff;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-search-input::placeholder {
+    color: #cfe2f3; /* Placeholder azul claro */
+    opacity: 0.8;
+}
+
+.custom-search-input:focus {
+    background-color: rgba(255, 255, 255, 0.35); /* Más visible al enfocar */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Sombra brillante */
+    outline: 0;
+}
+
+.custom-search-btn {
+    background-color: #1a237e; /* Azul oscuro para el botón */
+    color: #ffffff;
+    border: none;
+    border-radius: 0 25px 25px 0; /* Bordes redondeados */
+    padding: 10px 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.custom-search-btn:hover {
+    background-color: #283593; /* Azul oscuro un poco más claro al pasar el ratón */
+    transform: scale(1.05); /* Pequeño zoom en el botón */
+}
+
+/* Estilo para el botón de hamburguesa en móviles - Blanco brillante */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.4);
+    transition: border-color 0.3s ease;
+}
+
+.navbar-toggler:hover {
+    border-color: #ffffff;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Icono de hamburguesa blanco */
+}
+
+/* Ajuste para la barra de búsqueda en móviles */
+@media (max-width: 991.98px) {
+    .search-form {
+        margin-top: 15px;
+        margin-left: 0;
+        width: 100%; /* Ocupa todo el ancho */
+    }
+    .input-group {
+        width: 100%;
+    }
+    .custom-search-input,
+    .custom-search-btn {
+        border-radius: 30px !important; /* Bordes totalmente redondeados en móvil */
+    }
+}
