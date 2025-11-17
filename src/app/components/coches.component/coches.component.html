@@ -14,7 +14,7 @@
                     <h3 class="card-title-marca">{{coche.marca}}</h3>
                     <h2 class="card-title-modelo">{{coche.modelo}}</h2>
                     <p class="card-text-conductor">Conductor: **{{coche.conductor}}**</p>
-                    <a [routerLink]="['/update']" class="btn btn-warning">UPDATE</a>
+                    <a [routerLink]="['/update', coche.idCoche]" class="btn btn-warning">UPDATE</a>
                     <button (click)="deleteCoche(coche.idCoche)" class="btn btn-danger">DELETE</button>
                 </div>
             </div>

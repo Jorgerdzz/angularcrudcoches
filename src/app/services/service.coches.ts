@@ -20,6 +20,12 @@ export class ServiceCoches{
         return promise;
     }
 
+    getCoche(idCoche: number): Observable<Coche>{
+        let url = environment.urlApiCoches;
+        let request = "api/Coches/FindCoche/" + idCoche;
+        return this._http.get<Coche>(url + request);
+    }
+
     createCoche(coche: Coche): Promise<any>{
         let url = environment.urlApiCoches;
         let request = "api/Coches/InsertCoche";
@@ -40,6 +46,12 @@ export class ServiceCoches{
             })
         })
         return promise;
+    }
+
+    updateCoche(coche: Coche): Observable<any>{
+        let url = environment.urlApiCoches;
+        let request = "api/Coches/UpdateCoche";
+        return this._http.put(url + request, coche);
     }
 
 }

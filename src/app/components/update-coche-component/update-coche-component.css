@@ -1,0 +1,70 @@
+/* --- Estilos para el Formulario de Actualización (Consistente con Azul Vibrante) --- */
+
+/* Contenedor principal del formulario (La "tarjeta" del formulario) */
+.form-card-custom {
+    background: linear-gradient(145deg, #f0f8ff 0%, #e0f2ff 100%); /* Fondo azul muy claro, casi blanco */
+    padding: 35px;
+    border-radius: 20px; /* Bordes redondeados consistentes */
+    border: 1px solid #cceeff;
+    box-shadow: 0 10px 20px rgba(40, 116, 166, 0.2); /* Sombra azul más suave */
+}
+
+/* Título del Formulario */
+.form-title-blue {
+    color: #1a237e; /* Azul oscuro */
+    font-weight: 800;
+    font-size: 2rem;
+    text-shadow: 1px 1px 5px rgba(66, 133, 244, 0.1);
+}
+
+/* Etiquetas del Formulario */
+.form-label-custom {
+    display: block;
+    font-weight: 700;
+    color: #2874A6; /* Azul medio */
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Campos de Input (Textos) */
+.form-control-custom {
+    border: 2px solid #b3e5fc; /* Borde azul claro */
+    border-radius: 10px;
+    padding: 12px 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control-custom:focus {
+    border-color: #4285F4; /* Borde azul vibrante al enfocar */
+    box-shadow: 0 0 10px rgba(66, 133, 244, 0.4); /* Brillo azul al enfocar */
+    outline: none;
+    background-color: #ffffff;
+}
+
+/* Botón de Modificar Coche (Similar al botón de crear/insertar) */
+.btn-submit-custom {
+    background: linear-gradient(45deg, #2874A6 0%, #4285F4 100%); /* Degradado azul vibrante */
+    border: none;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 15px 20px;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 6px 15px rgba(40, 116, 166, 0.3); /* Sombra inicial azul */
+}
+
+.btn-submit-custom:hover {
+    background: linear-gradient(45deg, #4285F4 0%, #2874A6 100%); /* Invierte el degradado */
+    transform: translateY(-3px) scale(1.01); /* Efecto de levitación sutil */
+    box-shadow: 0 10px 20px rgba(66, 133, 244, 0.5); /* Sombra de brillo más intensa */
+    color: #e0f2f7;
+}
+
+.btn-submit-custom i {
+    margin-right: 8px; /* Espacio para el icono */
+}
