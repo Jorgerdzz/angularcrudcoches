@@ -1,0 +1,26 @@
+<div class="container my-5">
+    @if(cochesMarca.length>0){
+        <h2 class="text-center mb-5 text-shadow-blue">🚗 Catálogo de Vehículos 🏎️</h2>
+        
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+            
+            @for(coche of cochesMarca; track coche){
+            <div class="col">
+                <div class="coche-card shadow-lg h-100">
+                    <div class="card-img-container">
+                        <img src="{{coche.imagen}}" class="card-img-top" alt="Imagen del coche {{coche.modelo}}"/>
+                    </div>
+                    <div class="card-body-custom">
+                        <h5 class="card-id">#{{coche.idCoche}}</h5>
+                        <h3 class="card-title-marca">{{coche.marca}}</h3>
+                        <h2 class="card-title-modelo">{{coche.modelo}}</h2>
+                        <p class="card-text-conductor">Conductor: **{{coche.conductor}}**</p>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    }@else{
+        <h2 class="text-center mb-5 text-shadow-blue">🚗 No existe ningun coche con esa marca 🏎️</h2>
+    }
+</div>

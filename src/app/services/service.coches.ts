@@ -2,6 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { environment } from "../../environments/environment.development";
 import { Injectable } from "@angular/core";
 import { Coche } from "../models/coche";
+import { Observable } from "rxjs";
 
 @Injectable()
 export class ServiceCoches{
@@ -13,7 +14,6 @@ export class ServiceCoches{
         let request = "api/Coches";
         let promise = new Promise((resolve)=>{
             this._http.get(url + request).subscribe(response=>{
-                console.log(response)
                 resolve(response)
             })
         })
