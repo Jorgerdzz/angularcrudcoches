@@ -1,24 +1,30 @@
 <div class="container my-5">
-    <h2 class="text-center mb-5 text-shadow-blue">🚗 Catálogo de Vehículos 🏎️</h2>
-    
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+    @if(coches){
+        <h2 class="text-center mb-5 text-shadow-blue">🚗 Catálogo de Vehículos 🏎️</h2>
         
-        @for(coche of coches; track coche){
-        <div class="col">
-            <div class="coche-card shadow-lg h-100">
-                <div class="card-img-container">
-                    <img src="{{coche.imagen}}" class="card-img-top" alt="Imagen del coche {{coche.modelo}}"/>
-                </div>
-                <div class="card-body-custom">
-                    <h5 class="card-id">#{{coche.idCoche}}</h5>
-                    <h3 class="card-title-marca">{{coche.marca}}</h3>
-                    <h2 class="card-title-modelo">{{coche.modelo}}</h2>
-                    <p class="card-text-conductor">Conductor: **{{coche.conductor}}**</p>
-                    <a [routerLink]="['/update', coche.idCoche]" class="btn btn-warning">UPDATE</a>
-                    <button (click)="deleteCoche(coche.idCoche)" class="btn btn-danger">DELETE</button>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-4">
+            
+            @for(coche of coches; track coche){
+            <div class="col">
+                <div class="coche-card shadow-lg h-100">
+                    <div class="card-img-container">
+                        <img src="{{coche.imagen}}" class="card-img-top" alt="Imagen del coche {{coche.modelo}}"/>
+                    </div>
+                    <div class="card-body-custom">
+                        <h5 class="card-id">#{{coche.idCoche}}</h5>
+                        <h3 class="card-title-marca">{{coche.marca}}</h3>
+                        <h2 class="card-title-modelo">{{coche.modelo}}</h2>
+                        <p class="card-text-conductor">Conductor: **{{coche.conductor}}**</p>
+                        <a [routerLink]="['/update', coche.idCoche]" class="btn btn-warning">UPDATE</a>
+                        <button (click)="deleteCoche(coche.idCoche)" class="btn btn-danger">DELETE</button>
+                    </div>
                 </div>
             </div>
+            }
         </div>
-        }
-    </div>
+    }@else{
+        <div class="d-flex justify-content-lg-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif"/>
+        </div>
+    }
 </div>
